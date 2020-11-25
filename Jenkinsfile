@@ -1,7 +1,7 @@
 #!/usr/bn/env groovy
 
 pipeline{
-    agent { label 'jocktest3' }
+    agent { label 'golang' }
 
     triggers { pollSCM('H * * * *')}
     stages {
