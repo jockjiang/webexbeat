@@ -1,7 +1,7 @@
 #!/usr/bn/env groovy
 
 pipeline{
-    agent any
+    agent jocktest3
 
     triggers { pollSCM('H * * * *')}
     stages {
