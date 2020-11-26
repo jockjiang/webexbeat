@@ -14,7 +14,7 @@ pipeline{
         stage('Build'){
 
             steps{
-                sh ' mage build'
+                sh 'make'
             }
         }
     }
