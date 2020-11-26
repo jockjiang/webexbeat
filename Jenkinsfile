@@ -5,12 +5,16 @@ pipeline{
 
     triggers { pollSCM('H * * * *')}
     stages {
-        stage('Build'){
+        stage('Checking'){
+
             steps{
                 sh '/usr/bin/pwd'
             }
+        }
+        stage('Build'){
+
             steps{
-                sh 'mage build'
+                sh ' mage build'
             }
         }
     }
