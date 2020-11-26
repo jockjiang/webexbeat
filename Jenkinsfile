@@ -7,6 +7,9 @@ pipeline{
     stages {
         stage('Build'){
             steps{
+                sh '/usr/bin/pwd'
+            }
+            steps{
                 sh 'mage build'
             }
         }
