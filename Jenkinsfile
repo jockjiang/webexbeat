@@ -5,16 +5,19 @@ pipeline{
 
     triggers { pollSCM('H * * * *')}
     stages {
+        stage('Verify Branch'){
+            steps{
+                echo $GIT_BRANCh
+            }
+        }
         stage('Checking'){
-
             steps{
                 sh '/usr/bin/pwd'
             }
         }
         stage('Build'){
-
             steps{
-                sh 'make'
+                sh 'export make'
             }
         }
     }
